@@ -1,4 +1,4 @@
-.PHONY: setup lint test
+.PHONY: setup download lint test
 
 PY := python
 
@@ -13,3 +13,6 @@ lint:
 
 test:
 	pytest -q
+
+download:
+	$(PY) -m src.boe_vac.ingest --num-files 20

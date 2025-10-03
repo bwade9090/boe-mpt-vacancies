@@ -3,3 +3,4 @@
 .pytest_cache
 src/boe_vac/__pycache__
 tests/__pycache__
+data

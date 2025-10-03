@@ -10,3 +10,10 @@ This repository implements an end‑to‑end, **reproducible** mini‑project fo
 > **Target series:** https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/employmentandemployeetypes/timeseries/ap2y/lms/previous
 
 ---
+
+## Commands
+
+- `python -m src.boe_vac.ingest --num-files 20`
+  Scrape latest & previous pages, collect CSV links, download into `data/raw/` and write a manifest.
+
+---
