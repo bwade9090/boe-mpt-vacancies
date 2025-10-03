@@ -16,3 +16,6 @@ test:
 
 download:
 	$(PY) -m src.boe_vac.ingest --num-files 20
+
+build:
+	$(PY) -m src.boe_vac.transform

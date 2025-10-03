@@ -11,9 +11,23 @@ This repository implements an end‑to‑end, **reproducible** mini‑project fo
 
 ---
 
+## Design choices (high‑level)
+
+- **Vintage = CSV header `Release date`** (parsed from each file’s metadata). When absent, log a warning.
+- **Monthly only**: `Period` is parsed with robust regex for `YYYY MON` formats. Quarterly/Yearly rows are dropped.
+- **Schema (long)**:
+  - `vintage_date` (YYYY‑MM‑DD), `observation_month` (YYYY‑MM‑01), `value` (int)
+  - extra: `series_id`, `dataset_id`, `pre_unit`, `unit`
+- **Reproducibility**: zero hard‑coded absolute paths; `Makefile` targets; deterministic outputs; tests use **mock HTML & CSV** (no network needed).
+
+---
+
 ## Commands
 
 - `python -m src.boe_vac.ingest --num-files 20`
   Scrape latest & previous pages, collect CSV links, download into `data/raw/` and write a manifest.
+
+- `python -m src.boe_vac.transform`
+  Parse raw CSVs → extract metadata (incl. `vintage_date`) and monthly data → write `data/processed/vacancies_long.csv`.
 
 ---
