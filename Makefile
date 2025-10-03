@@ -19,3 +19,6 @@ download:
 
 build:
 	$(PY) -m src.boe_vac.transform
+
+viz:
+	$(PY) -m src.boe_vac.viz --month 2024-01
