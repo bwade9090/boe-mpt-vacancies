@@ -1,0 +1,18 @@
+[project]
+name = "boe-mpt-vacancies"
+version = "0.1.0"
+description = "ONS vacancy series (AP2Y): ingestion, vintage-aware structuring, visualisation, and forecasting baselines."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name="Hyungbae"}]
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+lint.extend-select = ["I", "UP", "RUF"]
+lint.ignore = ["E203"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]

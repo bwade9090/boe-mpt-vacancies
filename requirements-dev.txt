@@ -1,0 +1,7 @@
+pytest>=7.4
+pytest-cov>=4.1
+ruff>=0.6
+black>=24.8
+pre-commit>=3.7
+types-requests
+types-python-dateutil
