@@ -1,4 +1,4 @@
-.PHONY: setup download lint test
+.PHONY: setup download build viz forecast lint test
 
 PY := python
 
@@ -22,3 +22,8 @@ build:
 
 viz:
 	$(PY) -m src.boe_vac.viz --month 2024-01
+
+forecast:
+	$(PY) -m src.boe_vac.forecast --horizon 12
+
+all: download build viz forecast

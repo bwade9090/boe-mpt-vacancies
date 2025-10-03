@@ -5,3 +5,5 @@ python-dateutil>=2.9
 requests>=2.31
 truststore>=0.10
 matplotlib>=3.8
+statsmodels>=0.14
+scipy>=1.11
