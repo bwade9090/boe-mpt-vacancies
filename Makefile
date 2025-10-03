@@ -1,4 +1,4 @@
-.PHONY: setup download build viz forecast lint test
+.PHONY: setup download build viz forecast all lint test
 
 PY := python
 
