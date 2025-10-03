@@ -83,7 +83,7 @@ boe-mpt-vacancies/
 ## Commands
 
 - `python -m src.boe_vac.ingest --num-files 20`
-  Scrape latest & previous pages, collect CSV links, download into `data/raw/` and write a manifest.
+  Scrape previous page, collect CSV links, download into `data/raw/` and write a manifest.
 
 - `python -m src.boe_vac.transform`
   Parse raw CSVs → extract metadata (incl. `vintage_date`) and monthly data → write `data/processed/vacancies_long.csv`.
